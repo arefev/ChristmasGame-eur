@@ -1,0 +1,262 @@
+<?
+$URL = $_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
+$HOST = $_SERVER["HTTP_HOST"];
+?>
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0">
+	
+	
+	<meta property="og:url" content="<?=$URL?>">
+	<meta property="og:image" content="<?=$HOST?>/images/header-logo.png">
+	<meta property="og:type" content="article">
+	
+    <title>Christmas game</title>
+	
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/jquery.min.js"></script>
+	
+	<!--[if IE]><script src="js/placeholder.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+		<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<script src="js/placeholder.js"></script>
+	<![endif]-->
+	
+	<script type="text/javascript" src="js/three.canvas.js"></script>
+	<script type="text/javascript" src="js/snow.js"></script>
+	<script type="text/javascript" src="js/swfobject.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+	<div class="snowEffect"><canvas width="1920" height="955"></canvas></div>
+	<div class="b-main">
+	
+		<header class="b-header">
+			<div class="b-main-center">
+				<div class="b-logo b-main-layer"><img src="images/header-logo.png"></div>
+			</div>
+		</header> <!-- end b-header -->
+		
+		
+		<section class="b-page" id="pageVideo">
+			<div class="b-window-fill" id="windowFill"></div>
+			
+			<div class="b-video">
+				<div class="b-video-skip">Skip video</div>
+				<div id="ytapiplayer">
+					You need Flash player 8+ and JavaScript enabled to view this video.
+				</div>
+			</div>
+			
+			
+		</section> <!-- end #pageVideo -->
+
+		<section class="b-page" id="pageStart">
+			<div class="b-window-fill" id="windowFill"></div>
+			<div class="b-main-center b-main-layer">
+				<div class="b-page__title"><img src="images/text-ho-ho-ho.png"></div>
+				<center><p><i>Guys, were you well-behaved this year? We’ve got some presents for you!</i></p></center>
+
+				<div class="b-separator"></div>
+				
+				<ol class="g-upper b-rule">
+					<li>EACH CHRISTMAS TOY ON THIS CHRISTMAS TREE IS THE PHOTO OF EURODATE MEMBER</li>
+					<li>TURN THEM AROUND UNTIL YOU OPEN TWO IDENTICAL ONES. YOU NEED TO OPEN UP ALL PAIRS</li>
+					<li>GET <span class="g-color-green">FREE MONTHLY MEMBERSHIP</span> TO COMMUNICATE WITH EURODATE USERS!</li>
+				</ol>
+
+				<div class="b-link-start"><a href="javascript:void(0)" title="Start game"><img src="images/text-start-game.png"></a></div>
+				<div class="b-start-animals"><img src="images/animals-1.png"></div>
+			</div>
+		</section> <!-- end #pageStart -->
+		
+		<section class="b-page" id="pageGenderChoose">
+			<div class="b-window-fill" id="windowFill"></div>
+			<div class="b-main-center b-main-layer">
+				<div class="b-choose-btns">
+					<a href="javascript:void(0)" title="" class="b-choose-btns__left b-choose-btns__man"><img src="images/btn-man.png" alt=""/></a>
+					<img src="images/text-or.png" alt="" class="b-choose-btns__center"/>
+					<a href="javascript:void(0)" title="" class="b-choose-btns__right b-choose-btns__woman"><img src="images/btn-woman.png" alt=""/></a>
+					<div class="g-clear"></div>
+					
+					<div class="b-gender-choose-animals"><img src="images/animals-2.png"></div>
+				</div>
+				
+			</div>
+		</section> <!-- end #pageGenderChoose -->
+		
+		<section class="b-page" id="pageGame">
+			<div class="b-main-center">
+				<div class="b-tree" id="ChristmassTree">
+					<img src="images/tree.png" alt="" />
+					
+					<!-- 1-st LEVEL -->
+					<div class="b-tree-toy" style="left:319px; top:239px;">
+						<img src="images/toy-red.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-1.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-1.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:452px; top:250px;">
+						<img src="images/toy-red.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-8.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-8.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					
+					<!-- 2-nd LEVEL -->
+					<div class="b-tree-toy" style="left:283px; top:390px;">
+						<img src="images/toy-gold.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-5.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-5.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:390px; top:465px;">
+						<img src="images/toy-gold.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-7.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-7.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:494px; top:390px;">
+						<img src="images/toy-gold.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-3.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-3.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					
+					<!-- 3-d LEVEL-->
+					<div class="b-tree-toy" style="left:228px; top:578px;">
+						<img src="images/toy-red.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-6.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-6.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:331px; top:653px;">
+						<img src="images/toy-red.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-2.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-2.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:471px; top:653px;">
+						<img src="images/toy-red.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-9.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-9.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:576px; top:579px;">
+						<img src="images/toy-red.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-7.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-7.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					
+					<!-- 4-th LEVEL -->
+					<div class="b-tree-toy" style="left:152px; top:735px;">
+						<img src="images/toy-gold.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-10.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-10.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:252px; top:807px;">
+						<img src="images/toy-gold.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-8.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-8.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:401px; top:841px;">
+						<img src="images/toy-gold.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-9.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-9.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:522px; top:786px;">
+						<img src="images/toy-gold.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-2.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-2.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:634px; top:735px;">
+						<img src="images/toy-gold.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-5.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-5.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					
+					<!-- 5-th LEVEL -->
+					<div class="b-tree-toy" style="left:11px; top:902px;">
+						<img src="images/toy-red.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-10.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-10.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:149px; top:973px;">
+						<img src="images/toy-red.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-3.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-3.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:305px; top:1013px;">
+						<img src="images/toy-red.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-4.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-4.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:473px; top:1005px;">
+						<img src="images/toy-red.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-6.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-6.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:634px; top:973px;">
+						<img src="images/toy-red.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-4.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-4.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+					<div class="b-tree-toy" style="left:763px; top:911px;">
+						<img src="images/toy-red.png" alt="" class="b-tree-toy__bg"/>
+						<img src="images/photo/men/photo-1.png" alt="" class="b-tree-toy__photo" data-type="man" />
+						<img src="images/photo/women/photo-1.png" alt="" class="b-tree-toy__photo" data-type="woman" />
+					</div>
+				</div> <!-- end b-tree -->
+				
+				<div class="b-counter"><div class="b-counter__text">01031</div></div>
+				<div class="b-winners-text">winners have already got their gifts!</div>
+				<div class="b-game-desc">Each Christmas toy on this Christmas tree features the photo of a EuroDate member. Turn them around until you’ve opened two identical ones. You need to open up all pairs!</div>
+			</div>
+		</section> <!-- end #pageGame -->
+		
+		<section class="b-page" id="pageWinnerForm">
+			<div class="b-window-fill" id="windowFill"></div>
+			<div class="b-main-center b-main-layer">
+				<div class="b-page__title"><img src="images/text-congrats.png"></div>
+				<center><p>You’ve solved the EuroDate Christmas puzzle! Share the contest to your<br/>Facebook page and tell us your <span class="g-color-green">ID number</span> and we’ll grant you a <span class="g-color-green">Free Monthly Membership</span>. Put it here: </p></center>
+				
+				<div class="b-share">
+					<p><b>Your friends need to know how good you are! Share your results.</b></p>
+					<a href="https://www.facebook.com/sharer.php?u=<?=$URL?>" title="" class="b-btn-fb"></a>
+				</div>
+				<center>
+					<p>tell us your <span class="g-color-green">ID number</span></p>
+				</center>
+				<div class="b-form-send-id">
+					<form action="" method="post">
+						<input type="text" name="ID" class="b-input-text" placeholder="Your ID number on EuroDate.com" />
+						<input type="submit" class="b-btn-send" name="send" value=""/>
+						<p class="b-form-send-id__error">Tell us your ID number, please.</p>
+						<p class="b-form-send-id__result">ID number successfully sent!<br/>Thank you for your participation!<br/>Within 24 hours free credits would be added to your account!</p>
+						<p class="b-form-send-id__register">If you are not a member, click here to <a href="http://www.eurochristmastree.com/" title="Register" class="g-color-green">Register</a></p>
+						
+					</form>
+				</div>
+				
+				<div class="b-separator"></div>
+				
+				<p><i>Remember that you can try to win a present every 24 hours. Come and get it tomorrow!</i></p>
+				<div class="b-end-animals"><img src="images/animals-2.png"></div>
+			</div>
+		</section> <!-- end #pageWinnerForm -->
+		
+	</div> <!-- end b-main -->
+	
+	
+	<script src="http://swip.codylindley.com/jquery.popupWindow.js"></script>
+
+	<script type="text/javascript">
+		$('.b-btn-fb').popupWindow({ 
+			width:550, 
+			height:400,
+			centerBrowser:1
+		});
+	</script>
+</body>
+</html>
